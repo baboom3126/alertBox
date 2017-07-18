@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,user-scalable=0">
+
+    <title></title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+
+    <style media="screen">
+  body {
+width: 100%;
+overflow-x:hidden ;
+overflow-y: hidden;
+}
+
+#black{
+position: absolute;
+z-index: 2;
+opacity: 0.5;
+}
+
+.div_loading{
+  display: inline-block;
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  top: 45%;
+  z-index: 3;
+  text-align: left;
+}
+    </style>
+
+    <script type="text/javascript">
+
+    setTimeout(function(){
+
+      $(document).ready(function() {
+
+        $('.div_loading').hide();
+        document.getElementById("black").style.visibility="hidden";
+        document.body.style.overflowY = "scroll";
+
+  });
+
+}, 1300);
+
+
+    </script>
+  </head>
+  <body>
+
+
+    <img src="./img/black.jpg" alt="" id="black" height="100%" width="100%">
+
+    <div class="div_loading">
+      <div class="card" style="padding:2px 13px;">
+        <div class="preloader-wrapper small active">
+          <div class="spinner-layer spinner-green-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+        <span class="center" style="padding-left:20%;">
+      載入中 , 請稍等</span>
+    </div>
+    </div>
+
+
+
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#">/</a></li>
+          <li><a href="#">/</a></li>
+          <li><a href="#">/</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+  </body>
+</html>
