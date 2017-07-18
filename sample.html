@@ -37,6 +37,29 @@ opacity: 0.5;
   z-index: 3;
   text-align: left;
 }
+
+.div_alert{
+display: inline-block;
+width: 80%;
+position: absolute;
+left: 10%;
+top: 30%;
+z-index: 4;
+text-align: left;
+visibility: hidden;
+
+}
+
+.a4{
+    width: 100%;
+  text-align: center;
+  background-color: #ffa000;
+  color: white;
+  display: inline-block;
+ padding: 15px 15px;
+position: absolute;
+bottom: 0px;
+}
     </style>
 
     <script type="text/javascript">
@@ -53,6 +76,30 @@ opacity: 0.5;
 
 }, 1300);
 
+
+
+function go(){
+  document.getElementById("div_alert").style.visibility="visible";
+  document.getElementById("black").style.visibility="visible";
+
+  $(document).ready(function() {
+
+    $('#div_alert').fadeIn('100');
+});
+}
+
+
+
+
+function confirm(){
+  $(document).ready(function() {
+
+    $('#div_alert').fadeOut('100');
+});
+document.getElementById("black").style.visibility="hidden";
+
+
+}
 
     </script>
   </head>
@@ -95,8 +142,17 @@ opacity: 0.5;
 
 
 
+    <div class="div_alert" id="div_alert">
+    <div class="card" style="padding:15px 15px;">
+    <h4 style="padding-bottom:5px;">Title</h4>
 
-
-
+      <h5 style="padding-bottom:5px;">content</h5>
+      <h5 style="text-align:right;"><a href="#" onclick="javascript:confirm()" style="padding-right:20px;">取消</a>
+        <a href="#" onclick="javascript:confirm()">確定</a></h5>
+    </div>
+    </div>
+<div class="row">
+    <a href="#" class="a4 waves-effect" onclick="javascript:go()">點擊我</a>
+</div>
   </body>
 </html>
